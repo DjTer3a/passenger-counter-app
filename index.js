@@ -5,13 +5,23 @@ let count = 0
 let errorPara = document.getElementById("error-el")
 
 function increment(){
-    count += 1
-    countEl.innerText = count
+    if(count<22){
+        count += 1
+        countEl.innerText = count 
+    }
+    else{
+        countEl.innerText = `Max count of passangers reached.`;
+    }
 }
 
 function decrement(){
-    count -= 1
-    countEl.innerText = count
+    if(count>0){
+        count -= 1
+        countEl.innerText = count
+    }
+    else{
+        countEl.innerText = `No passangers left on bus.`;
+    }
 }
 
 function save(){ 
